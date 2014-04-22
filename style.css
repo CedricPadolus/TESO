@@ -1,0 +1,471 @@
+/*
+Theme Name: TESO
+Theme URI: 
+Author: Cedric Padolus
+Author URI: http://www.cedricpadolus.com/teso;
+Description: Thème Wordpress tiré du MMORPG The Elder Scrolls Online.
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, responsive, html5, css3, blog, guild, game, eso
+Text Domain: teso
+*/
+body {
+	width:100%;
+	max-width: 1050px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:0;
+	color:black;
+	font-family: 'Open Sans', sans-serif;
+}
+img {
+	max-width:100%;
+}
+img[Attributes Style] {
+max-width:100%;
+}
+
+form{margin:0;padding:0; border:0;}
+fieldset{margin:0 0 1.5em;padding:1.4em;}
+legend{font-weight:700;font-size:1.2em;}
+input.text,input.title,textarea,select{margin:.5em 0; color:white;border:1px solid lightblue;}
+input.text:focus,input.title:focus,textarea:focus,select:focus{color:black;}
+input.text,input.title{width:300px;padding:5px;color:white;border:0;border:1px solid lightblue;}
+textarea{padding:5px;}
+
+h1, h2, h3 {
+padding:0;
+margin:0;
+font-size:1.8rem;
+font-weight:bold;
+font-family: 'Open Sans', sans-serif;
+color:black;
+}
+#mainsingle h1, h2, h3 {
+padding:0;
+margin:0;
+font-size:1.8rem;
+font-weight:bold;
+font-family: 'Roboto', serif;
+color:black;
+
+}
+h3.post-title {
+	width:100%;
+	float:left;
+	margin:0;
+	font-size:1.2rem;
+	font-weight:bold;
+	font-family: 'Roboto', serif;
+	color:#0099ff!important;
+}
+.fullscreenbg{
+	width:100%;
+	height:100%;
+	background-color: black;
+	background:url(img/cover-new.jpg) top fixed;
+	background-repeat: no-repeat;
+}
+.wrap {
+	width:100%;
+	float:left;
+	display:inline;
+}
+#header {
+	width:100%;
+	float:left;
+	padding:4px;
+	background-color: #f1ece2;
+	margin-bottom: 30px;
+}
+#logo {
+	width:100%;
+	float:left;
+	height:81px;
+	margin:8px;
+}
+#logo img a {
+	height:81px;
+	margin:8px;
+	text-align: center;
+}
+
+nav, nav ul /* Liste */     
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 21px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+nav /* Ensemble du menu */
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 12px; /* hauteur du texte : 12 pixels */
+        margin: 30px 0 30px 0;
+        height:100px;
+        width:100%;
+        float:left;
+        opacity: 0.9;
+}
+nav a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 10px; /* aucune marge intérieure */
+      	background-color: #f1ece2;/* couleur de fond */        
+        color : #000; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 144px; /* largeur */
+        height:30px;
+        opacity: 1;
+}
+
+nav li /* Elements des listes */      
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaît pas "transparent" */
+        border-right : 1px solid #fff; /* on met une bordure blanche à droite de chaque élément */
+        box-shadow: 2px 2px black;
+		-webkit-box-shadow: 0px 0px 2px black;
+		margin:4px;
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body nav li
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+}
+
+nav li ul /* Sous-listes */
+{ 
+        position: absolute; /* Position absolue */
+        width: 144px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+nav li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body nav li ul li                
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+}
+
+nav li ul ul 
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-left     : 1px solid #fff ; /* Petite bordure à gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body nav li ul ul                
+{
+        border-left : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+
+}
+nav li:hover ul ul, nav li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+        color : #ad6c15;
+}
+
+nav li:hover ul, nav li li:hover ul, nav li.sfhover ul, nav li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+        color : #ad6c15;
+}
+#search {
+	width:50%;
+	float:right;
+	margin:10px;
+    animation:drop 1s ease-out  alternate;
+    -webkit-animation:drop 1s ease-out alternate;
+
+}
+
+@keyframes drop {
+
+from { margin-top:-300px;}
+50% {margin-top:30px;}
+75% {margin-top:0px;}
+to {margin-top:10px;}
+
+}
+
+@-webkit-keyframes drop {
+from { margin-top:-300px;}
+50% {margin-top:30px;}
+75% {margin-top:0px;}
+to {margin-top:10px;}
+	
+}
+
+.search-form {
+	float:right;
+	border:0;
+}
+
+.search-field {
+	background-color: transparent;
+	background-image: url("img/search-icon.png");
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	cursor: pointer;
+	height: 48px;
+	margin: 0;
+	padding: 0 0 0 34px;
+	position: relative;
+	-webkit-transition:width 400ms ease, background 400ms ease;
+	transition:width 400ms ease, background 400ms ease;
+	width: 38px;
+	border:0;
+	outline: 0;
+}
+.search-field input{
+	border:0;
+	outline: 0;
+	}
+
+.search-field:hover {
+	background-color: #fff;
+	border: 2px solid #c3c0ab;
+	cursor: text;
+	outline: 0!important;
+	width: 230px;
+	border:0;
+}
+.search-form
+.search-submit { 
+display:none;
+border:0;
+}
+#container {
+	width:100%;
+	top:300px;
+	float:left;
+	border-top:1px solid #948159;
+	border-left:1px solid #948159;
+	border-right:1px solid #948159;
+	background-color: #f1ece2;
+	box-shadow: 2px 2px black;
+	-webkit-box-shadow: 0px 0px 2px black;
+}
+#feed {
+	float:left;
+	width:98%;
+	text-align: right;
+	padding:4px;
+}
+#content {
+	width:70%;
+	float:left;
+	margin-bottom: 30px;
+	background-color: #f1ece2;
+}
+#navi {
+	float:left;
+	width:100%;
+	text-align: center;
+	margin:20px 0 0 0;
+	transition: all 0.3s;
+}
+
+#navi a{
+	width:180px;
+	height:44px;
+	margin:8px;
+	padding:2px 8px 8px 8px;
+	background-color: #fff;
+	text-decoration: none;
+	background: url("img/btn-left-small.png") top left no-repeat,url("img/btn-right-small.png") top right no-repeat;
+	line-height: 12px;
+
+}
+#thepost {
+	width:44%;
+	height:255px;
+	display: inline-block;
+	vertical-align: top;
+	margin:2px 10px 20px 20px;
+	padding:4px;
+	background-color: #f1ece2;
+}
+.sticky img {
+	border-left:3px solid #948159;
+	}
+
+#thepost-thumb {
+	width:100%;
+	height:200px;
+	float:left;
+	background-color: white;
+}
+
+#thepost-thumb {
+	width:100%;
+	height:200px;
+	float:left;
+	background-color: white;
+}
+#thepost-thumb img{
+	width:100%;
+	height:200px;
+	float:left;
+	background-color: white;
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+	-webkit-transition:opacity 0.5s ease-in
+}
+#thepost-thumb img:hover{
+	width:100%;
+	height:200px;
+	float:left;
+	background-color: white;
+	opacity: 0.6;
+	transition: opacity 0.5s ease-in;
+	-webkit-transition:opacity 0.5s ease-in
+}
+p.post-info {
+	float:left;
+	width:100%;
+	overflow: hidden;
+	margin:0;
+	font-size: 0.8rem;
+}
+.post {
+	width:98%;
+	float:left;
+	padding:20px;
+}
+.post-content {
+	padding:0;
+    margin:0;
+    height:200px;
+    width:323px;
+	position: absolute;
+    overflow:hidden;
+    display:inline-block;
+    vertical-align: top;
+    background-color:transparent;
+    opacity: 0.2;
+    color:transparent;
+    z-index:99;
+    transition: all 0.5s ease-in;
+	-webkit-transition:all 0.5s ease-in;
+}
+
+.post-content:hover {
+	position: absolute;
+    width:323px;
+    height:200px;
+    background-color:#eee;
+    color:black;
+    overflow:hidden;
+    display:inline-block;
+    z-index:2;
+    opacity: 1;
+    margin-right: -100px;
+	transition: all 0.5s ease-in;
+	-webkit-transition:all height 0.5sease-in
+}
+.mainsingle {
+	width:60%;
+	float:left;
+	padding:2px;
+	margin-bottom: 30px;
+}
+#post {
+	width:98%;
+	float:left;
+	padding:4px;
+	margin:4px;
+	display: block;
+}
+#sidebar {
+	float:left;
+	width:24%;
+	margin:10px 10px;
+}
+aside {
+	float:right;
+	width:100%;
+}
+#sidebar aside h1 {
+	float:left;
+	width:90%;
+	border-bottom:1px solid #948159;
+	padding:4px;
+	font-size: 1rem;
+	margin-bottom:8px;
+}
+#sidebar aside {
+	float:left;
+	width:96%;
+	margin: 0 0 30px 0;
+
+
+}
+#sidebar aside ul {
+	float:left;
+	width:96%;
+	margin: 8px 0 8px 0;
+	padding:4px;
+	list-style-type: none;
+			background-color:#efe6d0;
+}
+
+#post .post-comment {
+	float:left;
+	width:90%;
+	border:1px solid black;
+}
+ol.commentlist{
+	width:100%;
+	float:left;
+}
+ol.commentlist li{
+	width:100%;
+	float:left;
+}
+blockquote {
+	float:left;
+	width:98%;
+	margin:0;
+	padding:8px;
+	font-style: italic;
+	color: #413723;
+}
+blockquote p {
+	float:left;
+	width:100%;
+	margin:0;
+	padding:8px;
+
+}
+footer {
+	float:left;
+	width:100%;
+	height:80px;
+	background-color: black;
+	text-align: center;
+	padding:2px 0 2px 0;
+	margin-top: 30px;
+	color:#948159;
+	font-size: 0.8rem;
+}
+footer a:link {
+	text-align: center;
+	width:100%;
+	font-size: 0.8rem;
+}
